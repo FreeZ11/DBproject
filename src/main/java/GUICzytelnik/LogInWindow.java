@@ -1,4 +1,4 @@
-package GUI;
+package GUICzytelnik;
 
 public class LogInWindow {
 

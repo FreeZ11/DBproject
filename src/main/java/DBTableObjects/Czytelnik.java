@@ -67,4 +67,9 @@ public class Czytelnik implements Serializable {
     public void setHaslo(String haslo) {
         Haslo = haslo;
     }
+
+    @Override
+    public String toString(){
+        return "czytelnik: " + this.ID + ", " + this.imie + ", " + this.nazwisko+", "+this.PESEL;
+    }
 }
