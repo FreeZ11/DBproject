@@ -55,40 +55,50 @@ public class BookDAO implements DAOInterface<Book,String> {
         return currentTransaction;
     }
 
-
-
     @Override
     public void persist(Book entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().save(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public void update(Book entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().update(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public Book findById(String id) {
+        openCurrentSession();
         Book book = (Book) getCurrentSession().get(Book.class,id);
+        closeCurrentSession();
         return book;
     }
 
     @Override
     public void delete(Book entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().delete(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public List findAll() {
+        openCurrentSession();
         List<Book> books = (List<Book>) getCurrentSession().createQuery("from Book").list();
+        closeCurrentSession();
         return books;
     }
 
     @Override
     public void deleteAll() {
+        openCurrentSessionWithTransaction();
         List<Book> entityList = findAll();
         for (Book entity : entityList) {
             delete(entity);
         }
+        closeCurrentSessionWithTransaction();
     }
 }

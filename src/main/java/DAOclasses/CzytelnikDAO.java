@@ -57,36 +57,48 @@ public class CzytelnikDAO implements DAOInterface<Czytelnik,String> {
 
     @Override
     public void persist(Czytelnik entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().save(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public void update(Czytelnik entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().update(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public Czytelnik findById(String id) {
+        openCurrentSession();
         Czytelnik czytelnik = (Czytelnik) getCurrentSession().get(Czytelnik.class,id);
+        closeCurrentSession();
         return czytelnik;
     }
 
     @Override
     public void delete(Czytelnik entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().delete(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public List<Czytelnik> findAll() {
+        openCurrentSession();
         List<Czytelnik> czytelnicy = (List<Czytelnik>) getCurrentSession().createQuery("from Book").list();
+        closeCurrentSession();
         return czytelnicy;
     }
 
     @Override
     public void deleteAll() {
+        openCurrentSessionWithTransaction();
         List<Czytelnik> entityList = findAll();
         for (Czytelnik entity : entityList) {
             delete(entity);
         }
+        closeCurrentSessionWithTransaction();
     }
 }

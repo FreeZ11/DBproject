@@ -58,36 +58,48 @@ public class WypożyczeniaDAO implements DAOInterface<Wypożyczone,String> {
 
     @Override
     public void persist(Wypożyczone entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().save(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public void update(Wypożyczone entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().update(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public Wypożyczone findById(String id) {
+        openCurrentSession();
         Wypożyczone wypożyczone = (Wypożyczone) getCurrentSession().get(Wypożyczone.class,id);
+        closeCurrentSession();
         return wypożyczone;
     }
 
     @Override
     public void delete(Wypożyczone entity) {
+        openCurrentSessionWithTransaction();
         getCurrentSession().delete(entity);
+        closeCurrentSessionWithTransaction();
     }
 
     @Override
     public List<Wypożyczone> findAll() {
+        openCurrentSession();
         List<Wypożyczone> wypożyczone = (List<Wypożyczone>) getCurrentSession().createQuery("from Book").list();
+        closeCurrentSession();
         return wypożyczone;
     }
 
     @Override
     public void deleteAll() {
+        openCurrentSessionWithTransaction();
         List<Wypożyczone> entityList = findAll();
         for (Wypożyczone entity : entityList) {
             delete(entity);
         }
+        closeCurrentSessionWithTransaction();
     }
 }

@@ -14,9 +14,21 @@ public class Czytelnik implements Serializable {
     private int ID;
     private String imie;
     private String nazwisko;
+    private String plec;
     private int PESEL;
     private String Login;
     private String Haslo;
+
+    public Czytelnik(String imie, String nazwisko, String plec, int PESEL, String login, String haslo){
+
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.plec = plec;
+        this.PESEL = PESEL;
+        this.Login = login;
+        this.Haslo = haslo;
+
+    }
 
     //TODO sprawić by ID było autoincrement
     @Id
@@ -42,6 +54,14 @@ public class Czytelnik implements Serializable {
     }
     public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
+    }
+
+    @Column(name = "Płeć")
+    public String getPlec() {
+        return plec;
+    }
+    public void setPlec(String plec) {
+        this.plec = plec;
     }
 
     @Column(name = "PESEL")
