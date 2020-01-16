@@ -5,6 +5,7 @@ import DBTableObjects.Czytelnik;
 import GUIPracownik.GUIManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class LogInWindowController {
     @FXML
     TextField loginField = new TextField();
     @FXML
-    TextField PasswordField = new TextField();
+    PasswordField passwordField = new PasswordField();
     @FXML
     Label ErrorMessage = new Label();
 
@@ -22,15 +23,16 @@ public class LogInWindowController {
     private void loginFunction() throws Exception {
 
        CzytelnikDAO czytelnikDAO = new CzytelnikDAO();
-
-        if(loginField.getText().equals("Bibliotekarz") && PasswordField.getText().equals("librarian") ){
+       
+       
+        if(loginField.getText().equals("Bibliotekarz") && passwordField.getText().equals("librarian") ){
             GUIManager.getInstance().showLibrarianMenu();}
 
        List<Czytelnik> czytelnicy = czytelnikDAO.findAll();
 
        for (Czytelnik c : czytelnicy){
 
-           if(c.getLogin().equals(loginField.getText()) && c.getHaslo().equals(PasswordField.getText()) ){
+           if(c.getLogin().equals(loginField.getText()) && c.getHaslo().equals(passwordField.getText()) ){
                System.out.println("Witaj"+ c.getImie());
                GUIManager.getInstance().showReaderMenu();
            }
