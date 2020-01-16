@@ -7,22 +7,38 @@ import javafx.stage.Stage;
 
 public class GUIManager {
 
-    public GUIManager(){
+    private static GUIManager obj;
+    private static Stage window = new Stage();
+    private Parent root;
 
+    private GUIManager() {}
+
+    public static GUIManager getInstance()
+    {
+        if (obj==null)
+            obj = new GUIManager();
+        return obj;
     }
-    public final Stage primaryStage = new Stage();
 
     public void showSingUpWindow() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("SingUpWindow.fxml"));
-        primaryStage.setScene(new Scene(root, 662, 410));
-        primaryStage.show();
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("SingUpWindow.fxml"));
+        window.setScene(new Scene(root, 662, 410));
+        window.show();
 
     }
 
     public void showLogInWindow() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LogInWindow.fxml"));
-        primaryStage.setScene(new Scene(root, 662, 410));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("LogInWindow.fxml"));
+        window.setScene(new Scene(root, 662, 410));
+        window.setResizable(false);
+        window.show();
     }
+
+    public void showReaderMenuController() throws Exception{
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("ReaderMenu.fxml"));
+        window.setScene(new Scene(root));
+        window.show();
+
+    }
+
 }

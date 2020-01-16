@@ -1,14 +1,18 @@
 import GUIPracownik.GUIManager;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        GUIManager manager = new GUIManager();
-        manager.showLogInWindow();
+        GUIManager.getInstance().showLogInWindow();
+
     }
 
     public static void main(String[] args) {

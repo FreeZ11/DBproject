@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIPracownik.AddBookController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <AnchorPane layoutY="-1.0" prefHeight="409.0" prefWidth="662.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <TextField layoutX="100.0" layoutY="97.0" />
+                  <TextField layoutX="100.0" layoutY="136.0" prefHeight="149.0" prefWidth="150.0" />
+                  <Button layoutX="270.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="137.0" text="Dodaj " />
+                  <TextFlow layoutX="221.0" layoutY="95.0" prefHeight="26.0" prefWidth="38.0" />
+                  <Label layoutX="63.0" layoutY="136.0" prefHeight="26.0" prefWidth="38.0" text="Tytuł" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Dodaj książkę" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="64.0" layoutY="97.0" prefHeight="26.0" prefWidth="36.0" text="Isbn" />
+                  <TextField layoutX="352.0" layoutY="95.0" prefHeight="26.0" prefWidth="211.0" />
+                  <Label layoutX="313.0" layoutY="95.0" prefHeight="26.0" prefWidth="36.0" text="Autor" />
+                  <Label layoutX="313.0" layoutY="136.0" prefHeight="26.0" prefWidth="75.0" text="Data wydania" />
+                  <TextField layoutX="388.0" layoutY="136.0" prefHeight="26.0" prefWidth="86.0" />
+                  <TextField layoutX="388.0" layoutY="178.0" prefHeight="26.0" prefWidth="86.0" />
+                  <TextField layoutX="388.0" layoutY="220.0" prefHeight="26.0" prefWidth="86.0" />
+                  <Label layoutX="314.0" layoutY="178.0" prefHeight="26.0" prefWidth="75.0" text="Wydanie" />
+                  <Label layoutX="314.0" layoutY="220.0" prefHeight="26.0" prefWidth="75.0" text="Ilość stron" />
+                  <Button layoutX="447.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" text="Wróć" />
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

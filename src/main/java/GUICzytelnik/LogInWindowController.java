@@ -36,9 +36,7 @@ public class LogInWindowController {
     @FXML
     private void goToCreateAccount() throws Exception {
 
-        GUIManager manager = new GUIManager();
-        manager.showSingUpWindow();
-
+        GUIManager.getInstance().showSingUpWindow();
 
     }
 }

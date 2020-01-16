@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIPracownik.LibrarianMenuController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <AnchorPane layoutY="-1.0" prefHeight="409.0" prefWidth="662.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Button layoutX="60.0" layoutY="80.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz książki" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Bibliotekarz" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz czytelników" />
+                  <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz wypożyczenia" />
+                  <Button layoutX="469.0" layoutY="80.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Dodaj książkę" />
+                  <Button layoutX="469.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Wypożycz" />
+                  <Button layoutX="266.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Usuń książkę" />
+                  <Button layoutX="476.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Usuń czytelnika" />
+                  <Label layoutX="235.0" layoutY="310.0" prefHeight="18.0" prefWidth="28.0" text="ID" />
+                  <Label layoutX="433.0" layoutY="310.0" text="Pesel" />
+                  <TextField layoutX="266.0" layoutY="306.0" prefHeight="26.0" prefWidth="130.0" />
+                  <TextField layoutX="476.0" layoutY="306.0" prefHeight="26.0" prefWidth="130.0" />
+                  <Button layoutX="469.0" layoutY="170.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Wyloguj" />
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
