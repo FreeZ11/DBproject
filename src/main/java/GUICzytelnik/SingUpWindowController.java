@@ -23,7 +23,9 @@ public class SingUpWindowController {
 
     @FXML
     private void createAccount(){
-        Czytelnik nowyCzytelnik = new Czytelnik(imie.getText(),nazwisko.getText(),plec.getText(),Integer.parseInt(pesel.getText()),login.getText(),haslo.getText());
+
+        Czytelnik nowyCzytelnik = new Czytelnik(imie.getText(),nazwisko.getText(),plec.getText(),pesel.getText(),login.getText(),haslo.getText());
+
         CzytelnikDAO czytelnikDAO = new CzytelnikDAO();
         czytelnikDAO.persist(nowyCzytelnik);
     }

@@ -16,6 +16,7 @@ public class Wypożyczone {
     //TODO sprawdzić czy da się ustawić date w java
     private int Data_wyp;
     private int Data_odd;
+    public Wypożyczone(){};
 
     @Id
     @Column(name = "ID_Wypożyczenia")

@@ -87,7 +87,7 @@ public class CzytelnikDAO implements DAOInterface<Czytelnik,String> {
     @Override
     public List<Czytelnik> findAll() {
         openCurrentSession();
-        List<Czytelnik> czytelnicy = (List<Czytelnik>) getCurrentSession().createQuery("from Book").list();
+        List<Czytelnik> czytelnicy = (List<Czytelnik>) getCurrentSession().createQuery("from Czytelnik ").list();
         closeCurrentSession();
         return czytelnicy;
     }

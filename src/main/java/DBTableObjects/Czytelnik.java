@@ -15,11 +15,13 @@ public class Czytelnik implements Serializable {
     private String imie;
     private String nazwisko;
     private String plec;
-    private int PESEL;
+    private String PESEL;
     private String Login;
     private String Haslo;
 
-    public Czytelnik(String imie, String nazwisko, String plec, int PESEL, String login, String haslo){
+    public Czytelnik(){}
+
+    public Czytelnik(String imie, String nazwisko, String plec, String PESEL, String login, String haslo){
 
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -40,7 +42,7 @@ public class Czytelnik implements Serializable {
         this.ID = ID;
     }
 
-    @Column(name = "Imię")
+    @Column(name = "imie")
     public String getImie() {
         return imie;
     }
@@ -48,7 +50,7 @@ public class Czytelnik implements Serializable {
         this.imie = imie;
     }
 
-    @Column(name = "Nazwisko")
+    @Column(name = "nazwisko")
     public String getNazwisko() {
         return nazwisko;
     }
@@ -56,7 +58,7 @@ public class Czytelnik implements Serializable {
         this.nazwisko = nazwisko;
     }
 
-    @Column(name = "Płeć")
+    @Column(name = "plec")
     public String getPlec() {
         return plec;
     }
@@ -65,10 +67,10 @@ public class Czytelnik implements Serializable {
     }
 
     @Column(name = "PESEL")
-    public int getPESEL() {
+    public String getPESEL() {
         return PESEL;
     }
-    public void setPESEL(int PESEL) {
+    public void setPESEL(String PESEL) {
         this.PESEL = PESEL;
     }
 
@@ -80,7 +82,7 @@ public class Czytelnik implements Serializable {
         Login = login;
     }
 
-    @Column(name = "Hasło")
+    @Column(name = "Haslo")
     public String getHaslo() {
         return Haslo;
     }
