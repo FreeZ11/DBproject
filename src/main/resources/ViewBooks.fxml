@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIPracownik.CheckBorrowedBooksController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIPracownik.ViewReadersController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -17,13 +17,13 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Wypożyczenia" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Książki" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
                   <ListView layoutX="231.0" layoutY="55.0" prefHeight="313.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="231.39999999999998" AnchorPane.topAnchor="96.0" />
-                  <Button layoutX="69.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="37.0" prefWidth="70.0" text="Wróć" />
+                  <Button layoutX="74.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="41.0" prefWidth="72.0" text="Wróć" />
                </children>
             </AnchorPane>
       </children>

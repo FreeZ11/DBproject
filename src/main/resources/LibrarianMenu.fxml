@@ -17,13 +17,13 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <Button layoutX="60.0" layoutY="80.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz książki" />
+                  <Button layoutX="60.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#goToBooks" prefHeight="26.0" prefWidth="130.0" text="Zobacz książki" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Bibliotekarz" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz czytelników" />
+                  <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#goToReaders" prefHeight="26.0" prefWidth="130.0" text="Zobacz czytelników" />
                   <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#goToBorrowed" prefHeight="26.0" prefWidth="130.0" text="Zobacz wypożyczenia" />
                   <Button layoutX="469.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#goToAddBook" prefHeight="26.0" prefWidth="130.0" text="Dodaj książkę" />
                   <Button layoutX="469.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#goToBorrow" prefHeight="26.0" prefWidth="130.0" text="Wypożycz" />

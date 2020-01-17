@@ -54,7 +54,13 @@ public class GUIManager {
         window.setScene(new Scene(root));
         window.show();
     }
-
+    
+    public void showBorrow2() throws Exception{
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("Borrow2.fxml"));
+        window.setScene(new Scene(root));
+        window.show();
+    }
+    
     public void showBorrowedBooks() throws IOException {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("CheckBorrowedBooks.fxml"));
         window.setScene(new Scene(root));
@@ -75,6 +81,12 @@ public class GUIManager {
 
     public void showViewReaders() throws Exception{
         root = FXMLLoader.load(getClass().getClassLoader().getResource("ViewReaders.fxml"));
+        window.setScene(new Scene(root));
+        window.show();
+    }
+    
+    public void showViewBooks() throws Exception{
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("ViewBooks.fxml"));
         window.setScene(new Scene(root));
         window.show();
     }
