@@ -47,6 +47,7 @@ public class SingUpWindowController {
 
         CzytelnikDAO czytelnikDAO = new CzytelnikDAO();
         czytelnikDAO.persist(nowyCzytelnik);
+
     }
 
     @FXML

@@ -31,7 +31,7 @@
                   <TextField layoutX="345.0" layoutY="207.0" prefHeight="26.0" prefWidth="86.0" />
                   <Label layoutX="259.0" layoutY="151.0" prefHeight="26.0" prefWidth="75.0" text="ID czytelnika" />
                   <Label layoutX="231.0" layoutY="207.0" prefHeight="26.0" prefWidth="108.0" text="Data wypożyczenia" />
-                  <Button layoutX="271.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Wróć" />
+                  <Button layoutX="271.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="138.0" text="Wróć" />
                </children>
             </AnchorPane>
       </children>

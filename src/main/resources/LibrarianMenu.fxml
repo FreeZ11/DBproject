@@ -24,16 +24,16 @@
                      </font>
                   </Label>
                   <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz czytelników" />
-                  <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Zobacz wypożyczenia" />
-                  <Button layoutX="469.0" layoutY="80.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Dodaj książkę" />
-                  <Button layoutX="469.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Wypożycz" />
+                  <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#goToBorrowed" prefHeight="26.0" prefWidth="130.0" text="Zobacz wypożyczenia" />
+                  <Button layoutX="469.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#goToAddBook" prefHeight="26.0" prefWidth="130.0" text="Dodaj książkę" />
+                  <Button layoutX="469.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#goToBorrow" prefHeight="26.0" prefWidth="130.0" text="Wypożycz" />
                   <Button layoutX="266.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Usuń książkę" />
                   <Button layoutX="476.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Usuń czytelnika" />
                   <Label layoutX="235.0" layoutY="310.0" prefHeight="18.0" prefWidth="28.0" text="ID" />
                   <Label layoutX="433.0" layoutY="310.0" text="Pesel" />
                   <TextField layoutX="266.0" layoutY="306.0" prefHeight="26.0" prefWidth="130.0" />
                   <TextField layoutX="476.0" layoutY="306.0" prefHeight="26.0" prefWidth="130.0" />
-                  <Button layoutX="469.0" layoutY="170.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Wyloguj" />
+                  <Button layoutX="469.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#logOut" prefHeight="26.0" prefWidth="130.0" text="Wyloguj" />
                </children>
             </AnchorPane>
       </children>

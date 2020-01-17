@@ -18,7 +18,17 @@ public class Book implements Serializable {
     private int Strony;
     private int egzemplarzy;
 
-    //TODO sprawić by id było autoincrement
+   public Book(){}
+
+   public Book(int Isbn,String tytul,String autor, int rokwydania, int strony, int egzemplarzy){
+       this.Isbn=Isbn;
+       this.tytul=tytul;
+       this.autor=autor;
+       this.rok_wydania=rokwydania;
+       this.Strony=strony;
+       this.egzemplarzy=egzemplarzy;
+   }
+
     @Id
     @Column(name = "ID_Książki")
     public int getID() {
@@ -78,7 +88,7 @@ public class Book implements Serializable {
 
     @Override
     public String toString(){
-        return "Book: " + this.ID + ", " + this.tytul + ", " + this.autor+", "+this.rok_wydania;
+        return this.ID + ", " + this.tytul + ", " + this.autor+", "+this.rok_wydania;
     }
 }
 

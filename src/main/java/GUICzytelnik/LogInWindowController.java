@@ -18,6 +18,7 @@ public class LogInWindowController {
     PasswordField passwordField = new PasswordField();
     @FXML
     Label ErrorMessage = new Label();
+    public Czytelnik current;
 
     @FXML
     private void loginFunction() throws Exception {
@@ -34,7 +35,9 @@ public class LogInWindowController {
 
            if(c.getLogin().equals(loginField.getText()) && c.getHaslo().equals(passwordField.getText()) ){
                System.out.println("Witaj"+ c.getImie());
+               current=c;
                GUIManager.getInstance().showReaderMenu();
+
            }
            else{
                ErrorMessage.setText("Błędny login lub hasło");

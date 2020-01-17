@@ -86,7 +86,7 @@ public class WypożyczeniaDAO implements DAOInterface<Wypożyczone,String> {
     }
 
     @Override
-    public List<Wypożyczone> findAll() {
+    public List findAll() {
         openCurrentSession();
         List<Wypożyczone> wypożyczone = (List<Wypożyczone>) getCurrentSession().createQuery("from Wypożyczone ").list();
         closeCurrentSession();
