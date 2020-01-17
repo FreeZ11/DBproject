@@ -10,13 +10,12 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.sql.SQLException;
+
 public class SingUpWindowController {
 
-	
-	ObservableList<String> plecList = FXCollections.observableArrayList("m","k");
-	
-	
-	
+    ObservableList<String> plecList = FXCollections.observableArrayList("m","k");
+
     @FXML
     TextField imie = new TextField();
     @FXML
@@ -41,7 +40,7 @@ public class SingUpWindowController {
     }
 
     @FXML
-    private void createAccount(){
+    private void createAccount() throws SQLException {
 
         Czytelnik nowyCzytelnik = new Czytelnik(imie.getText(),nazwisko.getText(),plec.getValue(),pesel.getText(),login.getText(),haslo.getText());
 

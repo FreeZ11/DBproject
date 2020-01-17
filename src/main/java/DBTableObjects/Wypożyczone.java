@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Wypożyczenia")
+@Table(name = "Wypozyczenia")
 public class Wypożyczone {
 
     //TODO sprawdzić klucze obce i autoincrement id
@@ -43,7 +43,7 @@ public class Wypożyczone {
         this.IDCzytelnik = IDCzytelnik;
     }
 
-    @Column(name = "Data_Wypożyczenia")
+    @Column(name = "Data_Wypozyczenia")
     public int getData_wyp() {
         return Data_wyp;
     }

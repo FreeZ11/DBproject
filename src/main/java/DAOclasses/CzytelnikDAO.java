@@ -1,13 +1,11 @@
 package DAOclasses;
 
-import DBTableObjects.Book;
 import DBTableObjects.Czytelnik;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class CzytelnikDAO implements DAOInterface<Czytelnik,String> {
@@ -56,7 +54,7 @@ public class CzytelnikDAO implements DAOInterface<Czytelnik,String> {
     }
 
     @Override
-    public void persist(Czytelnik entity) {
+    public void persist(Czytelnik entity){
         openCurrentSessionWithTransaction();
         getCurrentSession().save(entity);
         closeCurrentSessionWithTransaction();
