@@ -19,7 +19,7 @@ public class Wypożyczone {
     public Wypożyczone(){};
 
     @Id
-    @Column(name = "ID_Wypożyczenia")
+    @Column(name = "id_Wypozyczenia")
     public int getID() {
         return ID;
     }
@@ -27,7 +27,7 @@ public class Wypożyczone {
         this.ID = ID;
     }
 
-    @Column(name = "ID_Książki")
+    @Column(name = "id_Ksiazki")
     public int getIDbook() {
         return IDbook;
     }
@@ -35,7 +35,7 @@ public class Wypożyczone {
         this.IDbook = IDbook;
     }
 
-    @Column(name = "ID_Czytelnika")
+    @Column(name = "id_Czytelnika")
     public int getIDCzytelnik() {
         return IDCzytelnik;
     }

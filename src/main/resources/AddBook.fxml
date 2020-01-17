@@ -18,9 +18,9 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <TextField layoutX="100.0" layoutY="97.0" />
-                  <TextField layoutX="100.0" layoutY="136.0" prefHeight="149.0" prefWidth="150.0" />
-                  <Button layoutX="270.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="137.0" text="Dodaj " />
+                  <TextField fx:id="isbnFiled" layoutX="100.0" layoutY="97.0" />
+                  <TextField fx:id="tytulField" layoutX="100.0" layoutY="136.0" prefHeight="149.0" prefWidth="150.0" />
+                  <Button layoutX="270.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#createBook" prefHeight="26.0" prefWidth="137.0" text="Dodaj " />
                   <TextFlow layoutX="221.0" layoutY="95.0" prefHeight="26.0" prefWidth="38.0" />
                   <Label layoutX="63.0" layoutY="136.0" prefHeight="26.0" prefWidth="38.0" text="Tytuł" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="54.0" prefWidth="662.0" text="Dodaj książkę" AnchorPane.bottomAnchor="354.20000000000005" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
@@ -29,15 +29,15 @@
                      </font>
                   </Label>
                   <Label layoutX="64.0" layoutY="97.0" prefHeight="26.0" prefWidth="36.0" text="Isbn" />
-                  <TextField layoutX="352.0" layoutY="95.0" prefHeight="26.0" prefWidth="211.0" />
+                  <TextField fx:id="autorField" layoutX="352.0" layoutY="95.0" prefHeight="26.0" prefWidth="211.0" />
                   <Label layoutX="313.0" layoutY="95.0" prefHeight="26.0" prefWidth="36.0" text="Autor" />
                   <Label layoutX="313.0" layoutY="136.0" prefHeight="26.0" prefWidth="75.0" text="Data wydania" />
-                  <TextField layoutX="388.0" layoutY="136.0" prefHeight="26.0" prefWidth="86.0" />
-                  <TextField layoutX="388.0" layoutY="178.0" prefHeight="26.0" prefWidth="86.0" />
-                  <TextField layoutX="388.0" layoutY="220.0" prefHeight="26.0" prefWidth="86.0" />
+                  <TextField fx:id="DataWydaniaField" layoutX="388.0" layoutY="136.0" prefHeight="26.0" prefWidth="86.0" />
+                  <TextField fx:id="wydanieField" layoutX="388.0" layoutY="178.0" prefHeight="26.0" prefWidth="86.0" />
+                  <TextField fx:id="iloscStronField" layoutX="388.0" layoutY="220.0" prefHeight="26.0" prefWidth="86.0" />
                   <Label layoutX="314.0" layoutY="178.0" prefHeight="26.0" prefWidth="75.0" text="Wydanie" />
                   <Label layoutX="314.0" layoutY="220.0" prefHeight="26.0" prefWidth="75.0" text="Ilość stron" />
-                  <Button layoutX="447.0" layoutY="330.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" text="Wróć" />
+                  <Button layoutX="447.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="131.0" text="Wróć" />
                </children>
             </AnchorPane>
       </children>
