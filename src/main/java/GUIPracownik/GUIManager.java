@@ -78,6 +78,12 @@ public class GUIManager {
         window.setScene(new Scene(root));
         window.show();
     }
+    
+    public void showAdminMenu() throws Exception{
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("AdminMenu.fxml"));
+        window.setScene(new Scene(root));
+        window.show();
+    }
 
     public void showViewReaders() throws Exception{
         root = FXMLLoader.load(getClass().getClassLoader().getResource("ViewReaders.fxml"));

@@ -28,6 +28,8 @@ public class LogInWindowController {
        
         if(loginField.getText().equals("Bibliotekarz") && passwordField.getText().equals("librarian") ){
             GUIManager.getInstance().showLibrarianMenu();}
+        else if(loginField.getText().equals("Administrator") && passwordField.getText().equals("admin") ){
+            GUIManager.getInstance().showAdminMenu();}
 
        List<Czytelnik> czytelnicy = czytelnikDAO.findAll();
 
