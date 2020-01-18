@@ -1,21 +1,16 @@
 package DBTableObjects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Wypozyczenia")
 public class Wypożyczone {
 
-    //TODO sprawdzić klucze obce i autoincrement id
     private int ID;
     private int IDbook;
     private int IDCzytelnik;
-    //TODO sprawdzić czy da się ustawić date w java
-    private int Data_wyp;
-    private int Data_odd;
+    private String Data_wyp;
+    private String Data_odd;
     public Wypożyczone(){};
 
     @Id
@@ -27,7 +22,7 @@ public class Wypożyczone {
         this.ID = ID;
     }
 
-    @Column(name = "id_Ksiazki")
+    @Column(name = "id_ksiazki")
     public int getIDbook() {
         return IDbook;
     }
@@ -35,7 +30,8 @@ public class Wypożyczone {
         this.IDbook = IDbook;
     }
 
-    @Column(name = "id_Czytelnika")
+
+    @Column(name = "id_czytelnika")
     public int getIDCzytelnik() {
         return IDCzytelnik;
     }
@@ -44,18 +40,25 @@ public class Wypożyczone {
     }
 
     @Column(name = "Data_Wypozyczenia")
-    public int getData_wyp() {
+    public String getData_wyp() {
         return Data_wyp;
     }
-    public void setData_wyp(int data_wyp) {
+    public void setData_wyp(String data_wyp) {
         Data_wyp = data_wyp;
     }
 
     @Column(name = "Data_Oddania")
-    public int getData_odd() {
+    public String getData_odd() {
         return Data_odd;
     }
-    public void setData_odd(int data_odd) {
+    public void setData_odd(String data_odd) {
         Data_odd = data_odd;
     }
+
+    @Override
+    public String toString(){
+        return this.ID + ", " + this.IDbook + ", " + this.IDCzytelnik;
+    }
 }
+
+

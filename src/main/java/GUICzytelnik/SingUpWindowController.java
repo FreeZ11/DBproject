@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class SingUpWindowController {
@@ -45,7 +44,7 @@ public class SingUpWindowController {
     }
 
     @FXML
-    private void createAccount() throws SQLException {
+    private void createAccount(){
     	
      CzytelnikDAO czytelnikDAO = new CzytelnikDAO();
      List<Czytelnik> czytelnicy = czytelnikDAO.findAll();
@@ -82,9 +81,7 @@ public class SingUpWindowController {
         czytelnikDAO.persist(nowyCzytelnik);
 		}
 		duplikatloginu=0;
-        
-        
-        
+
     }
 
     @FXML

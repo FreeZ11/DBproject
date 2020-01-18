@@ -1,8 +1,38 @@
 package GUIPracownik;
 
+import DAOclasses.BookDAO;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import org.hibernate.query.Query;
+
 
 public class LibrarianMenuController {
+
+
+    @FXML
+    TextField bookId = new TextField();
+    @FXML
+    TextField pesel = new TextField();
+
+    @FXML
+    private void deleteBook(){
+
+        BookDAO bookDAO = new BookDAO();
+        bookDAO.openCurrentSessionWithTransaction();
+        Query query = bookDAO.getCurrentSession().createSQLQuery("CALL removeBook(:bookid)").setParameter("bookid", bookId.getText());
+        query.executeUpdate();
+        bookDAO.closeCurrentSessionWithTransaction();
+
+    }
+
+    @FXML
+    private void deleteReader(){
+        BookDAO bookDAO = new BookDAO();
+        bookDAO.openCurrentSessionWithTransaction();
+        Query query = bookDAO.getCurrentSession().createSQLQuery("CALL removeReader(:pesel)").setParameter("pesel",pesel.getText());
+        query.executeUpdate();
+        bookDAO.closeCurrentSessionWithTransaction();
+    }
 
     @FXML
     private void goToBorrow() throws Exception{

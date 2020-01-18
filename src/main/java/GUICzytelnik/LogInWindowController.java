@@ -18,7 +18,7 @@ public class LogInWindowController {
     PasswordField passwordField = new PasswordField();
     @FXML
     Label ErrorMessage = new Label();
-    public Czytelnik current;
+    public static Czytelnik current;
 
     @FXML
     private void loginFunction() throws Exception {
@@ -33,15 +33,16 @@ public class LogInWindowController {
 
        List<Czytelnik> czytelnicy = czytelnikDAO.findAll();
 
-       for (Czytelnik c : czytelnicy){
+       for (Czytelnik c : czytelnicy) {
 
-           if(c.getLogin().equals(loginField.getText()) && c.getHaslo().equals(passwordField.getText()) ){
-               System.out.println("Witaj"+ c.getImie());
-               current=c;
+           if (c.getLogin().equals(loginField.getText()) && c.getHaslo().equals(passwordField.getText())) {
+
+               System.out.println("Witaj" + c.getImie());
+               current = new Czytelnik(c.getImie(), c.getNazwisko(), c.getPlec(), c.getPESEL(), c.getLogin(), c.getHaslo());
+               current.setID(c.getID());
                GUIManager.getInstance().showReaderMenu();
 
-           }
-           else{
+           } else {
                ErrorMessage.setText("Błędny login lub hasło");
            }
        }
