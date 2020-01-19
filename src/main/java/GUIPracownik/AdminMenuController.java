@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 
 public class AdminMenuController {
 
-	String hasloroota = "TU WPISZ HASLO DO ROOTA";
+	String hasloroota = "Krak3rs11";
 	@FXML
     Label ErrorMessage3 = new Label();
 	
