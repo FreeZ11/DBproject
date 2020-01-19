@@ -1,6 +1,7 @@
 package DBTableObjects;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "Wypozyczenia")
@@ -9,7 +10,7 @@ public class Wypożyczone {
     private int ID;
     private int IDbook;
     private int IDCzytelnik;
-    private String Data_wyp;
+    private Date Data_wyp;
     private String Data_odd;
     public Wypożyczone(){};
 
@@ -40,10 +41,10 @@ public class Wypożyczone {
     }
 
     @Column(name = "Data_Wypozyczenia")
-    public String getData_wyp() {
+    public Date getData_wyp() {
         return Data_wyp;
     }
-    public void setData_wyp(String data_wyp) {
+    public void setData_wyp(Date data_wyp) {
         Data_wyp = data_wyp;
     }
 

@@ -28,8 +28,6 @@ public class CheckYourBooksController {
 
         ObservableList<Book> wypOB = FXCollections.observableArrayList(books);
         booksList.setItems(wypOB);
-
-
     }
 
 

@@ -4,17 +4,21 @@ import DAOclasses.WypożyczeniaDAO;
 import DBTableObjects.Wypożyczone;
 import GUIPracownik.GUIManager;
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import org.hibernate.query.Query;
+
+import java.sql.Date;
 
 public class BorrowController {
 
     @FXML
     TextField idKsiazki = new TextField();
     @FXML
-    TextField dataWyp = new TextField();
+    DatePicker date = new DatePicker();
+    Date currDate;
     @FXML
     Label ErrorMessage = new Label();
     int ifBorrowed;
@@ -38,7 +42,8 @@ public class BorrowController {
             Wypożyczone wypozyczenie = new Wypożyczone();
             wypozyczenie.setIDbook(Integer.parseInt(idKsiazki.getText()));
             wypozyczenie.setIDCzytelnik(LogInWindowController.current.getID());
-            wypozyczenie.setData_wyp(dataWyp.getText());
+            currDate = Date.valueOf(date.getValue());
+            wypozyczenie.setData_wyp(currDate);
             wyp.persist(wypozyczenie);
             ErrorMessage.setTextFill(Color.GREEN);
             ErrorMessage.setText("Udało się wypożyczyć");
