@@ -1,11 +1,7 @@
 package GUICzytelnik;
 
-import DAOclasses.BookDAO;
-import DAOclasses.CzytelnikDAO;
 import DAOclasses.WypożyczeniaDAO;
 import DBTableObjects.Book;
-import DBTableObjects.Czytelnik;
-import DBTableObjects.Wypożyczone;
 import GUIPracownik.GUIManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,7 +18,6 @@ public class CheckYourBooksController {
     ListView<Book> booksList = new ListView<>();
     ArrayList<Book> books;
 
-    //TODO nie wiem czy działa jeszcze
     @FXML
     private void showBooks(){
         WypożyczeniaDAO wypożyczeniaDAO = new WypożyczeniaDAO();

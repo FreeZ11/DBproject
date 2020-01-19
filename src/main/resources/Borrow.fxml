@@ -26,6 +26,7 @@
                   <TextField fx:id="dataWyp" layoutX="345.0" layoutY="142.0" prefHeight="26.0" prefWidth="86.0" />
                   <Label layoutX="240.0" layoutY="142.0" prefHeight="26.0" prefWidth="108.0" text="Data wypożyczenia" />
                   <Button layoutX="271.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="138.0" text="Wróć" />
+                  <Label fx:id="ErrorMessage" layoutX="262.0" layoutY="55.0" prefHeight="26.0" prefWidth="171.0" textFill="RED" />
                </children>
             </AnchorPane>
       </children>
