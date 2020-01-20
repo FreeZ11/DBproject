@@ -11,7 +11,7 @@ public class Wypożyczone {
     private int IDbook;
     private int IDCzytelnik;
     private Date Data_wyp;
-    private String Data_odd;
+    private Date Data_odd;
     public Wypożyczone(){};
 
     @Id
@@ -49,16 +49,16 @@ public class Wypożyczone {
     }
 
     @Column(name = "Data_Oddania")
-    public String getData_odd() {
+    public Date getData_odd() {
         return Data_odd;
     }
-    public void setData_odd(String data_odd) {
+    public void setData_odd(Date data_odd) {
         Data_odd = data_odd;
     }
 
     @Override
     public String toString(){
-        return this.ID + ", " + this.IDbook + ", " + this.IDCzytelnik;
+        return this.ID + ",                  " + this.IDbook + ",                  " + this.IDCzytelnik;
     }
 }
 

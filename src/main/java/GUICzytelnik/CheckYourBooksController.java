@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class CheckYourBooksController {
 
+    //TODO trzeba dodać możliwośc oddawania książek czyli updatowanie tabeli wypozyczenia i wpisywanie daty oddania
     @FXML
     ListView<Book> booksList = new ListView<>();
     ArrayList<Book> books;
