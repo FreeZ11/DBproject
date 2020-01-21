@@ -89,6 +89,12 @@ public class AdminMenuController {
         GUIManager.getInstance().showLogInWindow();
     }
 
+    @FXML
+	private  void goToDBEditor() throws Exception {
+		GUIManager.getInstance().showDBEditor();
+	}
+
+
 
 
 }

@@ -97,4 +97,10 @@ public class GUIManager {
         window.show();
     }
 
+    public void showDBEditor() throws Exception{
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("AdminMenu2.fxml"));
+        window.setScene(new Scene(root));
+        window.show();
+    }
+
 }

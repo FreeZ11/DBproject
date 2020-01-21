@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import org.hibernate.query.Query;
 
+import java.security.Guard;
 import java.sql.Date;
 import java.util.List;
 
@@ -94,6 +95,10 @@ public class LibrarianMenuController {
     @FXML
     private void logOut() throws Exception{
         GUIManager.getInstance().showLogInWindow();
+    }
+    @FXML
+    private void backToAdmin() throws  Exception{
+        GUIManager.getInstance().showAdminMenu();
     }
 
 }
